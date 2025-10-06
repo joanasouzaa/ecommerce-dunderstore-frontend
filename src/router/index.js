@@ -1,14 +1,20 @@
 import {createRouter, createWebHistory} from 'vue-router';
 
-import LoginViewAdmin from "../views/admin/LoginView.vue";
+import LoginAdminView from "../views/admin/LoginAdminView.vue";
+import DashboardAdminView from '../views/admin/DashboardAdminView.vue';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
-            path: "/login",
+            path: "/admin/login",
             name: 'login',
-            component: LoginViewAdmin,
+            component: LoginAdminView,
+        },
+        {
+            path: "/admin/dashboard",
+            name: "dashboard",
+            component: DashboardAdminView
         }
     ]
 });
