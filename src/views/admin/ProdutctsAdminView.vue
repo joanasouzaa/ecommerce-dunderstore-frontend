@@ -1,11 +1,8 @@
 <template>
   <div class="flex min-h-screen">
-    <!-- Sidebar fixa -->
     <Sidebar />
 
-    <!-- Conteúdo principal -->
     <main class="flex-1 bg-[#F5F7FB] p-8">
-      <!-- Header -->
       <header class="flex justify-between items-start mb-8">
         <div>
           <h1 class="text-2xl font-semibold text-gray-900">Gestão de Produtos</h1>
