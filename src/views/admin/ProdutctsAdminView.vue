@@ -113,9 +113,9 @@
 </template>
 
 <script setup>
-import Sidebar from "../../components/SidebarAdminComponent.vue";
-import NewProductButton from "../../components/NewProductButton.vue";
-import ViewStoreButton from "../../components/ViewStoreButton.vue";
+import Sidebar from "../../components/admin/SidebarAdminComponent.vue";
+import NewProductButton from "../../components/admin/NewProductButton.vue";
+import ViewStoreButton from "../../components/admin/ViewStoreButton.vue";
 
 
 const produtos = [
