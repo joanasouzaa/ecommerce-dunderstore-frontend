@@ -4,7 +4,7 @@
     <div>
       <!-- Logo -->
       <div class="flex items-center justify-center h-20 border-b">
-        <img src="" alt="Logo Dunder Store" class="w-24" />
+        <img src="./../../assets/images/logo-dunderstore.png" alt="Logo Dunder Store" class="w-24" />
       </div>
 
       <!-- Menu principal -->

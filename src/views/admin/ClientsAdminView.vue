@@ -1,7 +1,4 @@
 <template>
-  <div class="flex min-h-screen">
-    <Sidebar />
-
 
     <main class="flex-1 bg-white p-8">
       <header class="flex justify-between items-center mb-8">
@@ -61,11 +58,9 @@
         </div>
       </section>
     </main>
-  </div>
 </template>
 
 <script setup>
-import Sidebar from "../../components/admin/SidebarAdminComponent.vue"
 import ViewStoreButton from "../../components/admin/ViewStoreButton.vue";
 
 const clientes = [

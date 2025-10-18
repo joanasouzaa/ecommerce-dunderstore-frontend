@@ -66,7 +66,8 @@
           </svg>
           <span>Carrinho</span>
         </router-link>
-        <span>Admin</span>
+        <router-link to="/admin/login"> <span>Admin</span></router-link>
+       
       </div>
     </div>
   </header>
