@@ -1,7 +1,4 @@
 <template>
-  <div class="flex min-h-screen">
-    <Sidebar />
-
     <main class="flex-1 bg-[#F5F7FB] p-8">
       <header class="flex justify-between items-start mb-8">
         <div>
@@ -109,11 +106,9 @@
         </table>
       </section>
     </main>
-  </div>
 </template>
 
 <script setup>
-import Sidebar from "../../components/admin/SidebarAdminComponent.vue";
 import NewProductButton from "../../components/admin/NewProductButton.vue";
 import ViewStoreButton from "../../components/admin/ViewStoreButton.vue";
 

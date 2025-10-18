@@ -13,6 +13,8 @@ import AdminLayout from "../src/components/layouts/AdminLayout.vue";
 const route = useRoute();
 
 const layout = computed(() => {
-  return route.meta.layout === "admin" ? AdminLayout : ClientLayout;
+  if (route.meta.layout === "admin") return AdminLayout;
+  if (route.meta.layout === "none") return "div";
+  return ClientLayout
 });
 </script>

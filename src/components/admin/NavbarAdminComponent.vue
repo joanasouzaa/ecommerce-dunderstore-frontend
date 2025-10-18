@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="fixed left-0 top-0 h-screen w-64 bg-white shadow-lg p-4">
         <div class="mb-8">
             <h2 class="text-2xl font-bold text-gray-600">E-commerce Admin</h2>
@@ -53,62 +53,92 @@
         </nav>
     </div>
 
-    <!-- Dashboard -->
-    <div class="ml-64 p-8">
-        <h1 class="text-3xl font-bold text-gray-800 mb-8 animate-fadeIn">Dashboard Semanal</h1>
+   
+</template> -->
 
-        <!-- Seção gráficos -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-            <div class="bg-white p-6 rounded-xl shadow-md">
-                <h2 class="text-lg font-semibold mb-4">Vendas por Dia (Quantidade) </h2>
-                <canvas id="salesQuantityChart"></canvas>
-            </div>
+<template>
+  <aside class="w-64 h-screen bg-white shadow-md flex flex-col justify-between">
+    <!-- Topo -->
+    <div>
+      <!-- Logo -->
+      <div class="flex items-center justify-center h-20 border-b">
+        <img src="../../assets/images/logo-dunderstore.png" alt="Logo Dunder Store" class="w-24" />
+      </div>
 
-            <div class="bg-white p-6 rounded-xl shadow-md">
-                <h2 class="text-lg font-semibold mb-4">Vendas por Dia (Valor) </h2>
-            </div>
-
-        </div>
-        <!-- Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div class="dashboard-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                <h3 class="text-gray-500 text-sm mb-2">Vendas Totais</h3>
-                <p class="text-3xl font-bold text-emerald-600">R$<span id="totalSales">0</span></p>
-                <div class="mt-4">
-                    <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded-full text-xs">+12% vs semana
-                        anterior</span>
-                </div>
-            </div>
-            <div class="dashboard-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                <h3 class="text-gray-500 text-sm mb-2">Pedidos Realizados</h3>
-                <p class="text-3xl font-bold text-blue-600"><span id="totalOrders">0</span></p>
-                <div class="mt-4">
-                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">+5% vs semana
-                        anterior</span>
-                </div>
-            </div>
-            <div class="dashboard-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                <h3 class="text-gray-500 text-sm mb-2">Ticket Médio</h3>
-                <p class="text-3xl font-bold text-purple-600">R$<span id="avgOrder">0</span></p>
-                <div class="mt-4">
-                    <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">+8% vs semana
-                        anterior</span>
-                </div>
-            </div>
-        </div>
-        <!-- Seção Dupla -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div class="bg-white p-6 rounded-xl shadow-md">
-                <h2 class="text-xl font-semibold text-gray-700 mb-45">Produtos Mais Vendidos</h2>
-                <div id="topProducts" class="space-y-4">
-                    <!-- Itens serão isenridos via JS -->
-                </div>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-md">
-                <h2 class="text-xl font-semibold text-gray-700 mb-45">Produtos Mais Vendidos</h2>
-                <div id="recentCustomers" class="divide-y divide-gray-200"></div>
-            </div>
-        </div>
-
+      <!-- Menu principal -->
+      <nav class="mt-6 px-4 space-y-2">
+        <RouterLink
+          v-for="item in menuItems"
+          :key="item.name"
+          :to="item.route"
+          class="flex items-center w-full text-left px-4 py-2 rounded-lg transition-colors duration-200"
+          :class="[
+            isActive(item.route)
+              ? 'bg-[#141A7C] text-white'
+              : 'text-gray-600 hover:bg-gray-100'
+          ]"
+        >
+          <component :is="item.icon" class="w-5 h-5 mr-3" />
+          <span class="font-medium text-sm">{{ item.label }}</span>
+        </RouterLink>
+      </nav>
     </div>
+
+    <!-- Parte inferior -->
+    <div class="border-t px-4 py-4 space-y-2">
+      <RouterLink
+        v-for="item in bottomItems"
+        :key="item.name"
+        :to="item.route"
+        class="flex items-center w-full text-left px-4 py-2 rounded-lg transition-colors duration-200"
+        :class="[
+          isActive(item.route)
+            ? 'bg-[#141A7C] text-white'
+            : 'text-gray-600 hover:bg-gray-100'
+        ]"
+      >
+        <component :is="item.icon" class="w-5 h-5 mr-3" />
+        <span class="font-medium text-sm">{{ item.label }}</span>
+      </RouterLink>
+    </div>
+  </aside>
 </template>
+
+<script setup>
+import { useRoute } from "vue-router";
+import {
+  Home,
+  Package,
+  ShoppingBag,
+  Users,
+  Ticket,
+  User,
+  Settings,
+  ClipboardList
+} from "lucide-vue-next";
+
+const route = useRoute();
+
+// Função para verificar se a rota está ativa
+const isActive = (path) => route.path === path;
+
+const menuItems = [
+  { name: "Dashboard", label: "Dashboard", icon: Home, route: "/admin/dashboard" },
+  { name: "Produtos", label: "Produtos", icon: Package, route: "/admin/produtos" },
+  {name: "Categorias", label: "Categorias", icon: ClipboardList, route: "/admin/categorias"},
+  { name: "Vendas", label: "Pedidos", icon: ShoppingBag, route: "/admin/pedidos" },
+  { name: "Clientes", label: "Clientes", icon: Users, route: "/admin/clientes" },
+  { name: "Cupons", label: "Cupons", icon: Ticket, route: "/admin/cupons" },
+];
+
+const bottomItems = [
+  { name: "Perfil", label: "Perfil", icon: User, route: "/perfil" },
+  { name: "Configurações", label: "Configurações", icon: Settings, route: "/configuracoes" },
+];
+</script>
+
+<style scoped>
+aside {
+  font-family: "Inter", sans-serif;
+}
+</style>
