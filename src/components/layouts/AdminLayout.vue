@@ -1,6 +1,6 @@
 <template>
   <div class="admin-layout flex h-screen">
-      <NavbarAdminComponent />
+      <SidebarAdminComponent />
       <main class="p-4 bg-gray-50 flex-1 overflow-y-auto">
         <slot />
       </main>
@@ -8,5 +8,5 @@
 </template>
 
 <script setup>
-import NavbarAdminComponent from "../admin/NavbarAdminComponent.vue";
+import SidebarAdminComponent from "../admin/SidebarAdminComponent.vue";
 </script>

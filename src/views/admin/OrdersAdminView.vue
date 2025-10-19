@@ -11,14 +11,14 @@
         </div>
       </header>
 
-      <section class="bg-white rounded-lg p-4 flex flex-wrap justify-between items-center shadow-sm mb-8">
+      <section class="bg-[#F5F7FB] rounded-lg p-4 flex flex-wrap justify-between items-center shadow-sm mb-8">
         <div class="flex items-center border border-gray-300 rounded-md px-3 py-2 w-full md:w-1/2">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500 mr-2" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M21 21l-4.35-4.35M9.5 17a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" />
           </svg>
-          <input type="text" placeholder="Buscar produto" class="outline-none w-full text-sm text-gray-700" />
+          <input type="text" placeholder="Buscar produto" class="outline-none w-full bg-[#F5F7FB] text-sm text-gray-700" />
         </div>
 
         <div class="flex space-x-3 mt-3 md:mt-0">
@@ -32,7 +32,7 @@
 
       </section>
 
-      <section class="card-product-list bg-[#F5F7FB]">
+      <section class="card-orders-list bg-[#F5F7FB]">
         <!-- buscar quantidade de pedidos realizados -->
         <h2>Pedidos (x)</h2>
         <div>
@@ -108,5 +108,7 @@ const pedidos = [
     status: "Cancelado",
     pagamento: "Boleto",
   },
+
+  
 ];
 </script>

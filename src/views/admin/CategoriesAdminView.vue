@@ -63,7 +63,7 @@
 
 <script setup>
 import ViewStoreButton from "../../components/admin/ViewStoreButton.vue";
-import NewCategory from "../../components/admin/NewCategoryButtomComponent.vue";
+import NewCategory from "../../components/admin/NewCategoryButtom.vue";
 
 const categorias = [
     {
