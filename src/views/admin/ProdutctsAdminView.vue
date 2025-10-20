@@ -14,7 +14,7 @@
 
       <!-- Barra de busca e filtros -->
       <section
-        class="bg-white rounded-lg p-4 flex flex-wrap justify-between items-center shadow-sm mb-8"
+        class="bg-[#F5F7FB] rounded-lg p-4 flex flex-wrap justify-between items-center shadow-sm mb-8"
       >
         <div class="flex items-center border border-gray-300 rounded-md px-3 py-2 w-full md:w-1/2">
           <svg
@@ -34,7 +34,7 @@
           <input
             type="text"
             placeholder="Buscar produto"
-            class="outline-none w-full text-sm text-gray-700"
+            class="outline-none w-full bg-[#F5F7FB] text-sm text-gray-700"
           />
         </div>
 
@@ -53,7 +53,7 @@
       </section>
 
       <!-- Lista de produtos -->
-      <section class="bg-white rounded-lg p-6 shadow-sm">
+      <section class="card-product-list bg-[#F5F7FB]">
         <h2 class="font-semibold text-gray-900 mb-4">Produtos (4)</h2>
 
         <table class="w-full text-sm text-left text-gray-700">
@@ -151,6 +151,9 @@ const produtos = [
     imagem: "https://via.placeholder.com/50",
   },
 ];
+
+
+
 </script>
 
 <style scoped>
