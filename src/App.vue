@@ -9,11 +9,13 @@ import { computed } from "vue";
 import { useRoute } from "vue-router";
 import ClientLayout from "../src/components/layouts/ClientLayout.vue";
 import AdminLayout from "../src/components/layouts/AdminLayout.vue";
+import CheckoutLayout from "./components/layouts/CheckoutLayout.vue";
 
 const route = useRoute();
 
 const layout = computed(() => {
   if (route.meta.layout === "admin") return AdminLayout;
+  if (route.meta.layout === "checkout") return CheckoutLayout
   if (route.meta.layout === "none") return "div";
   return ClientLayout
 });

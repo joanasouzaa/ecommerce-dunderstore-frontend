@@ -54,17 +54,16 @@
 
       <!-- Lista de produtos -->
       <section class="card-product-list bg-[#F5F7FB]">
-        <h2 class="font-semibold text-gray-900 mb-4">Produtos (4)</h2>
 
         <table class="w-full text-sm text-left text-gray-700">
           <thead class="text-gray-500 border-b text-md capitalize">
             <tr>
-              <th class="pb-3 font-medium">Produto</th>
-              <th class="pb-3 font-medium">Categoria</th>
-              <th class="pb-3 font-medium">Preço</th>
-              <th class="pb-3 font-medium">Estoque</th>
-              <th class="pb-3 font-medium">Status</th>
-              <th class="pb-3 font-medium text-center">Ações</th>
+              <th class="pb-3 color-[#7E7979] font-md">Produto</th>
+              <th class="pb-3 color-[#7E7979] font-md">Categoria</th>
+              <th class="pb-3 color-[#7E7979] font-md">Preço</th>
+              <th class="pb-3 color-[#7E7979] font-md">Estoque</th>
+              <th class="pb-3 color-[#7E7979] font-md">Status</th>
+              <th class="pb-3 color-[#7E7979] font-md">Ações</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-200">
