@@ -29,7 +29,6 @@
 
 
         <section class="card-product-list bg-[#F5F7FB] p-5 rounded-md">
-            <!-- buscar quantidade de pedidos realizados -->
             <div>
                 <table class="table-auto w-full text-left">
                     <thead class="text-gray-500 border-b text-md capitalize">

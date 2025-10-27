@@ -1,4 +1,6 @@
 <template>
+    <!-- ajustar o botão para adicionar um produto ao carrinho (não levar para a página), 
+     adicionar o número na navbar    -->
     <router-link to="/carrinho" class="mt-4 w-full flex items-center justify-center gap-2 bg-[#141A7C] text-white py-2 rounded-md hover:bg-indigo-800 transition">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-5 h-5">

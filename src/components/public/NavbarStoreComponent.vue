@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-gray-200 border-b border-gray-200 sticky top-0 z-50">
+  <header class="bg-white/30 border-b border-gray-200 backdrop-blur-lg sticky top-0 z-50">
     <div class="max-w-7xl mx-auto grid grid-cols-3 items-center px-6 md:px-8 h-20">
 
       <!-- COL 1: Logo -->

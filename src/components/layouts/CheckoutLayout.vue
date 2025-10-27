@@ -24,7 +24,6 @@ import NavbarCheckout from '../public/NavbarCheckout.vue';
  
 }
 
-/* Espaço para compensar a navbar sticky */
 .client-main {
 
   background-color: #fafafa;
