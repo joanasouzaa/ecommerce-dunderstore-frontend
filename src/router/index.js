@@ -11,6 +11,7 @@ import CategoriesAdminView from '../views/admin/CategoriesAdminView.vue';
 import CategoryView from '../views/default/CategoryView.vue';
 import ProductView from '../views/default/ProductView.vue';
 import CartView from '../views/default/CartView.vue';
+import CheckoutView from '../views/default/CheckoutView.vue';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -100,6 +101,14 @@ const router = createRouter({
             path: "/carrinho",
             name: "cart",
             component: CartView,
+        },
+        {
+            path: "/checkout",
+            name: "checkout",
+            component: CheckoutView,
+            meta: {
+                layout: "checkout"
+            }
         }
     ]
 });

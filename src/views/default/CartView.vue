@@ -92,10 +92,10 @@
             </div>
 
             <!-- Botão de pagamento -->
-            <button
-                class="w-full mt-6 bg-indigo-900 text-white font-medium py-2 rounded-lg hover:bg-indigo-800 transition">
+            <router-link to="/checkout"
+                class="w-full p-2 mt-6 bg-indigo-900 text-white font-medium py-2 rounded-lg hover:bg-indigo-800 transition">
                 Prosseguir para o Pagamento
-            </button>
+            </router-link>
         </aside>
     </main>
 
