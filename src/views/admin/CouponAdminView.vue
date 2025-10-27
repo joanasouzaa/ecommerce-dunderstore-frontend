@@ -1,6 +1,6 @@
 <template>
 
-    <main class="flex-1 bg-white p-8">
+    <main class="flex-1 bg-[#F5F7FB] p-8">
         <header class="flex justify-between items-center mb-8">
             <div>
                 <h1 class="text-2xl font-semibold text-gray-900">Cupons de Desconto</h1>
@@ -14,7 +14,7 @@
         </header>
 
         <section class="bg-[#F5F7FB] rounded-lg p-4 flex flex-wrap justify-between items-center shadow-sm mb-8">
-            <div class="flex items-center  border-gray-300 rounded-md px-3 py-2 w-full md:w-1/2">
+            <div class="flex items-center border border-gray-300 rounded-md px-3 py-2 w-full md:w-1/2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500 mr-2" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -30,17 +30,16 @@
 
         <section class="card-product-list bg-[#F5F7FB] p-5 rounded-md">
             <!-- buscar quantidade de pedidos realizados -->
-            <h2 class="pb-4">Lista de Cupons</h2>
             <div>
                 <table class="table-auto w-full text-left">
                     <thead class="text-gray-500 border-b text-md capitalize">
                         <tr>
-                            <th class="color-[#7E7979] font-md">Código</th>
-                            <th class="color-[#7E7979] font-md">Descrição</th>
-                            <th class="color-[#7E7979] font-md">Desconto</th>
-                            <th class="color-[#7E7979] font-md">Validade</th>
-                            <th class="color-[#7E7979] font-md">Status</th>
-                            <th class="color-[#7E7979] font-md">Ações</th>
+                            <th class="pb-3 color-[#7E7979] font-md">Código</th>
+                            <th class="pb-3color-[#7E7979] font-md">Descrição</th>
+                            <th class="pb-3color-[#7E7979] font-md">Desconto</th>
+                            <th class="pb-3color-[#7E7979] font-md">Validade</th>
+                            <th class="pb-3color-[#7E7979] font-md">Status</th>
+                            <th class="pb-3color-[#7E7979] font-md">Ações</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-200">
