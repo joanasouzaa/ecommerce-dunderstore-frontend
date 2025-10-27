@@ -1,6 +1,6 @@
 <template>
     <button
-        class="flex items-center gap-2 border border-gray-300 text-gray-700 px-4 py-2 rounded-md text-sm hover:bg-gray-100 transition">
+        class="flex bg-white items-center gap-2 border border-gray-300 text-gray-700 px-4 py-2 rounded-md text-sm hover:bg-gray-100 transition">
         <Eye />
       <router-link to="/">Ver Loja</router-link>
     </button>
